@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'welcome/index'
 
-  resources :articles
+  resources :articles do
+  	#nests comments within the article
+  	resources :comments
+  end
 
   root 'welcome#index'
 
