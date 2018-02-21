@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   resources :articles do
   	#nests comments within the article
   	resources :comments
+    
+    collection do
+      get :search #creates a new path for searching
+    end
+
   end
 
   root 'welcome#index'
