@@ -13,8 +13,30 @@
  */
 
  /*Custom bootstrap variables must be set or imported *before* bootstrap.*/
-@import "bootstrap"
+@import "bootstrap";
+@import "welcome";
+@import "navigation";
+@import "footer";
 
-//= require jquery3
-//= require popper
-//= require bootstrap-sprockets
+//= require jquery3;
+//= require popper;
+//= require bootstrap-sprockets;
+
+.container{
+  padding-top: 15px;
+}
+
+.form-control
+{
+  background-color: #efeeef;
+  /*border: 2px solid black;*/
+}
+
+thead{
+  background-color: #dddddd;
+}
+
+body {
+  min-height: 75rem;
+  padding-top: 4.5rem;
+}

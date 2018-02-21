@@ -1,7 +1,11 @@
+<div class="row" style="padding-top:10%">
+<div class="col"></div>
+<div class="col-md-10">
+
 <h1> Create a New Form </h1>
 
 <%= form_for :article, url: articles_path do |f|%>
-	
+<div class="field" style="100%;">
 <!-- Checking for Errors -->
 
 <% if @article.errors.any? %>
@@ -27,18 +31,23 @@
 <% end %>
 	<p>
 		<%= f.label :title %><br>
-		<%= f.text_field :title %>
+		<%= f.text_field :title, class:'form-control' %>
 	</p>
 
 	<p>
 		<%= f.label :text %><br>
-		<%= f.text_area :text %>
+		<%= f.text_area :text, class:'form-control' %>
 	</p>
 	<p>
-		<%= f.submit %>
+		<%= f.submit class:"btn btn-info" %>
 	</p>
+	</div>	
 <% end %>
 
-<p><%= link_to 'Article List', articles_path %> |
+<p><%= link_to 'Article List', articles_path, class:"btn btn-link" %>
 
-<%= link_to 'Main Page', welcome_index_path %></p>
+<%= link_to 'Main Page', welcome_index_path, class:"btn btn-link" %></p>
+
+</div>
+<div class="col"></div>
+</div>
