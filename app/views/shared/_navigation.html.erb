@@ -6,11 +6,11 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-              <%= link_to 'Home', welcome_index_path, class:"nav-link" %>
+              <%= active_link_to 'Home', 'welcome', 'index', welcome_index_path, 'active_nav-link' %>
               <span class="sr-only">(current)</span>
           </li>
           <li class="nav-item">
-            <%= link_to 'Blog', articles_path, class:"nav-link" %>
+            <%= active_link_to 'Blog', 'articles','index', articles_path, 'active_nav-link' %>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="#">About</a>
